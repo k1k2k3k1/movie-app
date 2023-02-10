@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//import React, { useContext } from 'react'
+import Cards from './componant/Cards';
+import Header from './componant/Header'
+import { Route, Routes } from 'react-router-dom';
+import Addmovie from './componant/Addmovie';
+import Detail from './componant/Detail';
+//import { createContext, useEffect, useState  } from 'react';
 
-function App() {
+//const Appstate = createContext();
+const App = () => {
+  // const [login, setLogin] = useState(false);
+  // const [userName, setUserName] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <Appstate.provider value={{login, userName, setLogin, setUserName}}> 
+    <div>
+     <Header/> 
+ <Routes>
+ <Route path="/" element={<Cards/>}/>
+ <Route path="/about" element={<Addmovie/>}/>
+ <Route path='/detail/:id' element={<Detail/>}/>
+ </Routes>
+     
     </div>
-  );
+    //</Appstate.provider>
+  )
 }
 
 export default App;
+//export {Appstate}
