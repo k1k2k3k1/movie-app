@@ -87,7 +87,7 @@ const Reviews = ({id, prevRating, userRated}) => {
             <div className='mt-4'>
                 {data.map((e, i) => {
                     return(
-                        <div className=' p-2 w-full border-b header bg-opacity-50 border-gray-600 mt-2' key={i}>
+                        <div className=' p-2 w-full border-b header bg-opacity-50 border-red-600 mt-2' key={i}>
                             <div className='flex items-center'>
                                 <p className='text-blue-500'>{e.name}</p>
                                 <p className='ml-3 text-xs'>({new Date(e.timestamp).toLocaleString()})</p>
